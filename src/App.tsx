@@ -610,8 +610,6 @@ function NewsAndFaqs() {
 
 
 export default function App() {
-  const [isVerified, setIsVerified] = useState(false);
-
   return (
     <>
     <style>{`
@@ -626,9 +624,7 @@ export default function App() {
       }
     `}</style>
     <div className="min-h-screen font-sans bg-white text-zinc-900 flex flex-col">
-      {!isVerified && <AgeVerificationModal onVerify={() => setIsVerified(true)} />}
-      
-      <div className={!isVerified ? 'blur-xl pointer-events-none transition-all duration-500 flex flex-col flex-1' : 'flex flex-col flex-1'}>
+      <div className="flex flex-col flex-1">
         <Header />
         
         <main className="flex-1 flex flex-col">
